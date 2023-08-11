@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class Stone : MonoBehaviour
@@ -7,7 +7,7 @@ public class Stone : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Î‚É‚Ô‚Â‚©‚Á‚½‚æIƒQ[ƒ€ƒI[ƒo[I");
+            Debug.Log("çŸ³ã«ã¶ã¤ã‹ã£ãŸã‚ˆï¼ã‚²ãƒ¼ãƒ ã‚ªãƒ¼ãƒãƒ¼ï¼");
         }
     }
 }

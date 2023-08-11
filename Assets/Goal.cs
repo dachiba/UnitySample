@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ public class Goal : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("‚Ğ‚æ‚±‚¿‚á‚ñ‚ğ•‚¯‚½‚æIƒQ[ƒ€ƒNƒŠƒA[I");
+            Debug.Log("ã²ã‚ˆã“ã¡ã‚ƒã‚“ã‚’åŠ©ã‘ãŸã‚ˆï¼ã‚²ãƒ¼ãƒ ã‚¯ãƒªã‚¢ãƒ¼ï¼ï¼");
         }
     }
 }

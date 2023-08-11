@@ -1,44 +1,44 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
 
-    public GameObject target; // ’Ç]‚·‚é‘ÎÛ‚ğŒˆ‚ß‚é•Ï”
-    Vector3 pos;              // ƒJƒƒ‰‚Ì‰ŠúˆÊ’u‚ğ‹L‰¯‚·‚é‚½‚ß‚Ì•Ï”
+    public GameObject target; // è¿½å¾“ã™ã‚‹å¯¾è±¡ã‚’æ±ºã‚ã‚‹å¤‰æ•°
+    Vector3 pos;              // ã‚«ãƒ¡ãƒ©ã®åˆæœŸä½ç½®ã‚’è¨˜æ†¶ã™ã‚‹ãŸã‚ã®å¤‰æ•°
 
     // Start is called before the first frame update
     void Start()
     {
-        pos = Camera.main.gameObject.transform.position; //ƒJƒƒ‰‚Ì‰ŠúˆÊ’u‚ğ•Ï”pos‚É“ü‚ê‚é
+        pos = Camera.main.gameObject.transform.position; //ã‚«ãƒ¡ãƒ©ã®åˆæœŸä½ç½®ã‚’å¤‰æ•°posã«å…¥ã‚Œã‚‹
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 cameraPos = target.transform.position; // cameraPos‚Æ‚¢‚¤•Ï”‚ğì‚èA’Ç]‚·‚é‘ÎÛ‚ÌˆÊ’u‚ğ“ü‚ê‚é
+        Vector3 cameraPos = target.transform.position; // cameraPosã¨ã„ã†å¤‰æ•°ã‚’ä½œã‚Šã€è¿½å¾“ã™ã‚‹å¯¾è±¡ã®ä½ç½®ã‚’å…¥ã‚Œã‚‹
 
-        // ‚à‚µ‘ÎÛ‚Ì‰¡ˆÊ’u‚ª0‚æ‚è¬‚³‚¢ê‡
+        // ã‚‚ã—å¯¾è±¡ã®æ¨ªä½ç½®ãŒ0ã‚ˆã‚Šå°ã•ã„å ´åˆ
         if (target.transform.position.x < 0)
         {
-            cameraPos.x = 0; // ƒJƒƒ‰‚Ì‰¡ˆÊ’u‚É0‚ğ“ü‚ê‚é
+            cameraPos.x = 0; // ã‚«ãƒ¡ãƒ©ã®æ¨ªä½ç½®ã«0ã‚’å…¥ã‚Œã‚‹
         }
 
-        // ‚à‚µ‘ÎÛ‚ÌcˆÊ’u‚ª0‚æ‚è¬‚³‚¢ê‡
+        // ã‚‚ã—å¯¾è±¡ã®ç¸¦ä½ç½®ãŒ0ã‚ˆã‚Šå°ã•ã„å ´åˆ
         if (target.transform.position.y < 0)
         {
-            cameraPos.y = 0;  // ƒJƒƒ‰‚ÌcˆÊ’u‚É0‚ğ“ü‚ê‚é
+            cameraPos.y = 0;  // ã‚«ãƒ¡ãƒ©ã®ç¸¦ä½ç½®ã«0ã‚’å…¥ã‚Œã‚‹
         }
 
-        // ‚à‚µ‘ÎÛ‚ÌcˆÊ’u‚ª0‚æ‚è‘å‚«‚¢ê‡
+        // ã‚‚ã—å¯¾è±¡ã®ç¸¦ä½ç½®ãŒ0ã‚ˆã‚Šå¤§ãã„å ´åˆ
         if (target.transform.position.y > 0)
         {
-            cameraPos.y = target.transform.position.y;   // ƒJƒƒ‰‚ÌcˆÊ’u‚É‘ÎÛ‚ÌˆÊ’u‚ğ“ü‚ê‚é
+            cameraPos.y = target.transform.position.y;   // ã‚«ãƒ¡ãƒ©ã®ç¸¦ä½ç½®ã«å¯¾è±¡ã®ä½ç½®ã‚’å…¥ã‚Œã‚‹
         }
 
-        cameraPos.z = -10; // ƒJƒƒ‰‚Ì‰œs‚«‚ÌˆÊ’u‚É-10‚ğ“ü‚ê‚é
-        Camera.main.gameObject.transform.position = cameraPos; //@ƒJƒƒ‰‚ÌˆÊ’u‚É•Ï”cameraPos‚ÌˆÊ’u‚ğ“ü‚ê‚é
+        cameraPos.z = -10; // ã‚«ãƒ¡ãƒ©ã®å¥¥è¡Œãã®ä½ç½®ã«-10ã‚’å…¥ã‚Œã‚‹
+        Camera.main.gameObject.transform.position = cameraPos; //ã€€ã‚«ãƒ¡ãƒ©ã®ä½ç½®ã«å¤‰æ•°cameraPosã®ä½ç½®ã‚’å…¥ã‚Œã‚‹
 
     }
 }

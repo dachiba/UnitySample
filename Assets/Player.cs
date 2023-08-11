@@ -1,35 +1,35 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 5f;   // ‰¡‚ÉˆÚ“®‚·‚é‘¬“x
-    public float jumpP = 300f; // ƒWƒƒƒ“ƒv—Í
+    public float speed = 5f;   // æ¨ªã«ç§»å‹•ã™ã‚‹é€Ÿåº¦
+    public float jumpP = 300f; // ã‚¸ãƒ£ãƒ³ãƒ—åŠ›
 
-    Rigidbody2D rbody; // ƒŠƒWƒbƒhƒ{ƒfƒB‚ğg‚¤‚½‚ß‚ÌéŒ¾
+    Rigidbody2D rbody; // ãƒªã‚¸ãƒƒãƒ‰ãƒœãƒ‡ã‚£ã‚’ä½¿ã†ãŸã‚ã®å®£è¨€
 
     // Start is called before the first frame update
     void Start()
     {
-        // ƒŠƒWƒbƒhƒ{ƒfƒB2D‚ğƒRƒ“ƒ|[ƒlƒ“ƒg‚©‚çæ“¾‚µ‚Ä•Ï”‚É“ü‚ê‚é
+        // ãƒªã‚¸ãƒƒãƒ‰ãƒœãƒ‡ã‚£2Dã‚’ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‹ã‚‰å–å¾—ã—ã¦å¤‰æ•°ã«å…¥ã‚Œã‚‹
         rbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ƒWƒƒƒ“ƒv‚ğ‚·‚é‚½‚ß‚ÌƒR[ƒhi‚à‚µƒXƒy[ƒXƒL[‚ª‰Ÿ‚³‚ê‚ÄAã•ûŒü‚É‘¬“x‚ª‚È‚¢‚Éj
+        // ã‚¸ãƒ£ãƒ³ãƒ—ã‚’ã™ã‚‹ãŸã‚ã®ã‚³ãƒ¼ãƒ‰ï¼ˆã‚‚ã—ã‚¹ãƒšãƒ¼ã‚¹ã‚­ãƒ¼ãŒæŠ¼ã•ã‚Œã¦ã€ä¸Šæ–¹å‘ã«é€Ÿåº¦ãŒãªã„æ™‚ã«ï¼‰
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // ƒŠƒWƒbƒhƒ{ƒfƒB‚É—Í‚ğ‰Á‚¦‚éiã•ûŒü‚ÉƒWƒƒƒ“ƒv—Í‚ğ‚©‚¯‚éj
+            // ãƒªã‚¸ãƒƒãƒ‰ãƒœãƒ‡ã‚£ã«åŠ›ã‚’åŠ ãˆã‚‹ï¼ˆä¸Šæ–¹å‘ã«ã‚¸ãƒ£ãƒ³ãƒ—åŠ›ã‚’ã‹ã‘ã‚‹ï¼‰
             rbody.AddForce(transform.up * jumpP);
         }
     }
 
     private void FixedUpdate()
     {
-        //ƒŠƒWƒbƒhƒ{ƒfƒB‚Éˆê’è‚Ì‘¬“x‚ğ“ü‚ê‚éi‰¡ˆÚ“®‚Ì‘¬“x, ƒŠƒWƒbƒhƒ{ƒfƒB‚Ìy‚Ì‘¬“xj
+        //ãƒªã‚¸ãƒƒãƒ‰ãƒœãƒ‡ã‚£ã«ä¸€å®šã®é€Ÿåº¦ã‚’å…¥ã‚Œã‚‹ï¼ˆæ¨ªç§»å‹•ã®é€Ÿåº¦, ãƒªã‚¸ãƒƒãƒ‰ãƒœãƒ‡ã‚£ã®yã®é€Ÿåº¦ï¼‰
         rbody.velocity = new Vector2(speed, rbody.velocity.y);
     }
 }
